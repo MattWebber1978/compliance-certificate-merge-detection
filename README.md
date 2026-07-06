@@ -27,6 +27,8 @@ So there is no direct, reliable, platform-native signal that says "this specific
 
 This is a heuristic, not a guarantee — see [Limitations](#limitations) below.
 
+<img width="1255" height="767" alt="image" src="https://github.com/user-attachments/assets/40eb107a-2e98-4c9c-b106-14c9b4b0488c" />
+
 ## Architecture
 
 | Class | Responsibility |
@@ -47,9 +49,6 @@ Two distinct testing strategies are used, deliberately:
 - **Real DML, real merge** (`AccountTriggerHandlerTest`) — a genuine `merge` statement is executed in test context, proving the whole pipeline against actual Salesforce merge semantics rather than assumptions about them. This is the test that would have caught both wrong assumptions above.
 
 `ComplianceCertificateSelectorTest` sits in between — it can't be mocked, since its entire purpose is verifying the SOQL filter logic itself, so it runs against real inserted records.
-
-<img width="1255" height="767" alt="image" src="https://github.com/user-attachments/assets/40eb107a-2e98-4c9c-b106-14c9b4b0488c" />
-
 
 ## Limitations
 
