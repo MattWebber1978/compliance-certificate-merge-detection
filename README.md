@@ -48,6 +48,9 @@ Two distinct testing strategies are used, deliberately:
 
 `ComplianceCertificateSelectorTest` sits in between — it can't be mocked, since its entire purpose is verifying the SOQL filter logic itself, so it runs against real inserted records.
 
+<img width="1255" height="767" alt="image" src="https://github.com/user-attachments/assets/40eb107a-2e98-4c9c-b106-14c9b4b0488c" />
+
+
 ## Limitations
 
 - **This is a heuristic, not a certainty.** In principle, an unrelated process modifying a certificate in the same narrow time window, by the same user, could be misidentified as a merge-driven reparent. The time window is deliberately narrow to minimize this risk.
